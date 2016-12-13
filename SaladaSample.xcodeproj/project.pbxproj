@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BA4A2ACA8BA2BD6D7AFEAC1 /* Pods_SaladaSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627ABF38B6ADB4BB5786754E /* Pods_SaladaSample.framework */; };
+		DE1274F41E001432005E05DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1274F31E001432005E05DB /* AppDelegate.swift */; };
+		DE1274F61E001432005E05DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1274F51E001432005E05DB /* ViewController.swift */; };
+		DE1274F91E001432005E05DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1274F71E001432005E05DB /* Main.storyboard */; };
+		DE1274FB1E001432005E05DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1274FA1E001432005E05DB /* Assets.xcassets */; };
+		DE1274FE1E001432005E05DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1274FC1E001432005E05DB /* LaunchScreen.storyboard */; };
+		DE1275091E001433005E05DB /* SaladaSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275081E001433005E05DB /* SaladaSampleTests.swift */; };
+		DE1275141E001434005E05DB /* SaladaSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275131E001434005E05DB /* SaladaSampleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE1275051E001433005E05DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE1274E81E001431005E05DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE1274EF1E001432005E05DB;
+			remoteInfo = SaladaSample;
+		};
+		DE1275101E001434005E05DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE1274E81E001431005E05DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE1274EF1E001432005E05DB;
+			remoteInfo = SaladaSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		627ABF38B6ADB4BB5786754E /* Pods_SaladaSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaladaSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8DB068D2E407CB3C599391 /* Pods-SaladaSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaladaSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SaladaSample/Pods-SaladaSample.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1274F01E001432005E05DB /* SaladaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaladaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1274F31E001432005E05DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE1274F51E001432005E05DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE1274F81E001432005E05DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE1274FA1E001432005E05DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE1274FD1E001432005E05DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE1274FF1E001432005E05DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE1275041E001433005E05DB /* SaladaSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaladaSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1275081E001433005E05DB /* SaladaSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaladaSampleTests.swift; sourceTree = "<group>"; };
+		DE12750A1E001433005E05DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE12750F1E001434005E05DB /* SaladaSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaladaSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1275131E001434005E05DB /* SaladaSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaladaSampleUITests.swift; sourceTree = "<group>"; };
+		DE1275151E001434005E05DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF31CFF32DFE8E6264C1B2B4 /* Pods-SaladaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaladaSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaladaSample/Pods-SaladaSample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE1274ED1E001432005E05DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA4A2ACA8BA2BD6D7AFEAC1 /* Pods_SaladaSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE1275011E001433005E05DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12750C1E001434005E05DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3475CCF27123422975327DD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA8DB068D2E407CB3C599391 /* Pods-SaladaSample.debug.xcconfig */,
+				FF31CFF32DFE8E6264C1B2B4 /* Pods-SaladaSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DE1274E71E001431005E05DB = {
+			isa = PBXGroup;
+			children = (
+				DE1274F21E001432005E05DB /* SaladaSample */,
+				DE1275071E001433005E05DB /* SaladaSampleTests */,
+				DE1275121E001434005E05DB /* SaladaSampleUITests */,
+				DE1274F11E001432005E05DB /* Products */,
+				3475CCF27123422975327DD1 /* Pods */,
+				FA26CFC26DD2D5DB8497E352 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE1274F11E001432005E05DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE1274F01E001432005E05DB /* SaladaSample.app */,
+				DE1275041E001433005E05DB /* SaladaSampleTests.xctest */,
+				DE12750F1E001434005E05DB /* SaladaSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE1274F21E001432005E05DB /* SaladaSample */ = {
+			isa = PBXGroup;
+			children = (
+				DE1274F31E001432005E05DB /* AppDelegate.swift */,
+				DE1274F51E001432005E05DB /* ViewController.swift */,
+				DE1274F71E001432005E05DB /* Main.storyboard */,
+				DE1274FA1E001432005E05DB /* Assets.xcassets */,
+				DE1274FC1E001432005E05DB /* LaunchScreen.storyboard */,
+				DE1274FF1E001432005E05DB /* Info.plist */,
+			);
+			path = SaladaSample;
+			sourceTree = "<group>";
+		};
+		DE1275071E001433005E05DB /* SaladaSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE1275081E001433005E05DB /* SaladaSampleTests.swift */,
+				DE12750A1E001433005E05DB /* Info.plist */,
+			);
+			path = SaladaSampleTests;
+			sourceTree = "<group>";
+		};
+		DE1275121E001434005E05DB /* SaladaSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE1275131E001434005E05DB /* SaladaSampleUITests.swift */,
+				DE1275151E001434005E05DB /* Info.plist */,
+			);
+			path = SaladaSampleUITests;
+			sourceTree = "<group>";
+		};
+		FA26CFC26DD2D5DB8497E352 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				627ABF38B6ADB4BB5786754E /* Pods_SaladaSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE1274EF1E001432005E05DB /* SaladaSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE1275181E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSample" */;
+			buildPhases = (
+				ABFED8397A0913CF7A0D3CB9 /* [CP] Check Pods Manifest.lock */,
+				DE1274EC1E001432005E05DB /* Sources */,
+				DE1274ED1E001432005E05DB /* Frameworks */,
+				DE1274EE1E001432005E05DB /* Resources */,
+				1E1A8764D166215F1EE7CBE2 /* [CP] Embed Pods Frameworks */,
+				6CC08351A8829D497CC6B5A4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SaladaSample;
+			productName = SaladaSample;
+			productReference = DE1274F01E001432005E05DB /* SaladaSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE1275031E001433005E05DB /* SaladaSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12751B1E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSampleTests" */;
+			buildPhases = (
+				DE1275001E001433005E05DB /* Sources */,
+				DE1275011E001433005E05DB /* Frameworks */,
+				DE1275021E001433005E05DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE1275061E001433005E05DB /* PBXTargetDependency */,
+			);
+			name = SaladaSampleTests;
+			productName = SaladaSampleTests;
+			productReference = DE1275041E001433005E05DB /* SaladaSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE12750E1E001434005E05DB /* SaladaSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12751E1E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSampleUITests" */;
+			buildPhases = (
+				DE12750B1E001434005E05DB /* Sources */,
+				DE12750C1E001434005E05DB /* Frameworks */,
+				DE12750D1E001434005E05DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE1275111E001434005E05DB /* PBXTargetDependency */,
+			);
+			name = SaladaSampleUITests;
+			productName = SaladaSampleUITests;
+			productReference = DE12750F1E001434005E05DB /* SaladaSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE1274E81E001431005E05DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = just1factory;
+				TargetAttributes = {
+					DE1274EF1E001432005E05DB = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = S5BF5553KY;
+						ProvisioningStyle = Automatic;
+					};
+					DE1275031E001433005E05DB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE1274EF1E001432005E05DB;
+					};
+					DE12750E1E001434005E05DB = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE1274EF1E001432005E05DB;
+					};
+				};
+			};
+			buildConfigurationList = DE1274EB1E001432005E05DB /* Build configuration list for PBXProject "SaladaSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE1274E71E001431005E05DB;
+			productRefGroup = DE1274F11E001432005E05DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE1274EF1E001432005E05DB /* SaladaSample */,
+				DE1275031E001433005E05DB /* SaladaSampleTests */,
+				DE12750E1E001434005E05DB /* SaladaSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE1274EE1E001432005E05DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1274FE1E001432005E05DB /* LaunchScreen.storyboard in Resources */,
+				DE1274FB1E001432005E05DB /* Assets.xcassets in Resources */,
+				DE1274F91E001432005E05DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE1275021E001433005E05DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12750D1E001434005E05DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E1A8764D166215F1EE7CBE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaladaSample/Pods-SaladaSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CC08351A8829D497CC6B5A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SaladaSample/Pods-SaladaSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABFED8397A0913CF7A0D3CB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE1274EC1E001432005E05DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1274F61E001432005E05DB /* ViewController.swift in Sources */,
+				DE1274F41E001432005E05DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE1275001E001433005E05DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1275091E001433005E05DB /* SaladaSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12750B1E001434005E05DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE1275141E001434005E05DB /* SaladaSampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE1275061E001433005E05DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE1274EF1E001432005E05DB /* SaladaSample */;
+			targetProxy = DE1275051E001433005E05DB /* PBXContainerItemProxy */;
+		};
+		DE1275111E001434005E05DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE1274EF1E001432005E05DB /* SaladaSample */;
+			targetProxy = DE1275101E001434005E05DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE1274F71E001432005E05DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE1274F81E001432005E05DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE1274FC1E001432005E05DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE1274FD1E001432005E05DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE1275161E001434005E05DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE1275171E001434005E05DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE1275191E001434005E05DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8DB068D2E407CB3C599391 /* Pods-SaladaSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S5BF5553KY;
+				INFOPLIST_FILE = SaladaSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.SaladaSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE12751A1E001434005E05DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF31CFF32DFE8E6264C1B2B4 /* Pods-SaladaSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S5BF5553KY;
+				INFOPLIST_FILE = SaladaSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.SaladaSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DE12751C1E001434005E05DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SaladaSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.SaladaSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaladaSample.app/SaladaSample";
+			};
+			name = Debug;
+		};
+		DE12751D1E001434005E05DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SaladaSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.SaladaSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaladaSample.app/SaladaSample";
+			};
+			name = Release;
+		};
+		DE12751F1E001434005E05DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SaladaSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.SaladaSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SaladaSample;
+			};
+			name = Debug;
+		};
+		DE1275201E001434005E05DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SaladaSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.just1factory.SaladaSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SaladaSample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE1274EB1E001432005E05DB /* Build configuration list for PBXProject "SaladaSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE1275161E001434005E05DB /* Debug */,
+				DE1275171E001434005E05DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE1275181E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE1275191E001434005E05DB /* Debug */,
+				DE12751A1E001434005E05DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE12751B1E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12751C1E001434005E05DB /* Debug */,
+				DE12751D1E001434005E05DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE12751E1E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12751F1E001434005E05DB /* Debug */,
+				DE1275201E001434005E05DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE1274E81E001431005E05DB /* Project object */;
+}
