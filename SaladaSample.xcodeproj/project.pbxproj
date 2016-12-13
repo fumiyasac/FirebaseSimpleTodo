@@ -15,6 +15,13 @@
 		DE1274FE1E001432005E05DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1274FC1E001432005E05DB /* LaunchScreen.storyboard */; };
 		DE1275091E001433005E05DB /* SaladaSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275081E001433005E05DB /* SaladaSampleTests.swift */; };
 		DE1275141E001434005E05DB /* SaladaSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275131E001434005E05DB /* SaladaSampleUITests.swift */; };
+		DE1275241E0021C3005E05DB /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275231E0021C2005E05DB /* FormController.swift */; };
+		DE1275261E002260005E05DB /* Salada.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275251E002260005E05DB /* Salada.swift */; };
+		DE1275281E0022A8005E05DB /* Todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275271E0022A8005E05DB /* Todolist.swift */; };
+		DE12752C1E002332005E05DB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12752A1E002332005E05DB /* PhotoCell.swift */; };
+		DE12752D1E002332005E05DB /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE12752B1E002332005E05DB /* PhotoCell.xib */; };
+		DEC3133B1E002B6A00B8FA52 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC313391E002B6A00B8FA52 /* ListCell.swift */; };
+		DEC3133C1E002B6A00B8FA52 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3133A1E002B6A00B8FA52 /* ListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,13 @@
 		DE12750F1E001434005E05DB /* SaladaSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaladaSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1275131E001434005E05DB /* SaladaSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaladaSampleUITests.swift; sourceTree = "<group>"; };
 		DE1275151E001434005E05DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE1275231E0021C2005E05DB /* FormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
+		DE1275251E002260005E05DB /* Salada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salada.swift; sourceTree = "<group>"; };
+		DE1275271E0022A8005E05DB /* Todolist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todolist.swift; sourceTree = "<group>"; };
+		DE12752A1E002332005E05DB /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		DE12752B1E002332005E05DB /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		DEC313391E002B6A00B8FA52 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		DEC3133A1E002B6A00B8FA52 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		FF31CFF32DFE8E6264C1B2B4 /* Pods-SaladaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaladaSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaladaSample/Pods-SaladaSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,8 +127,11 @@
 		DE1274F21E001432005E05DB /* SaladaSample */ = {
 			isa = PBXGroup;
 			children = (
+				DE1275221E0017F2005E05DB /* Models */,
+				DE1275211E0017E8005E05DB /* Components */,
 				DE1274F31E001432005E05DB /* AppDelegate.swift */,
 				DE1274F51E001432005E05DB /* ViewController.swift */,
+				DE1275231E0021C2005E05DB /* FormController.swift */,
 				DE1274F71E001432005E05DB /* Main.storyboard */,
 				DE1274FA1E001432005E05DB /* Assets.xcassets */,
 				DE1274FC1E001432005E05DB /* LaunchScreen.storyboard */,
@@ -139,6 +156,42 @@
 				DE1275151E001434005E05DB /* Info.plist */,
 			);
 			path = SaladaSampleUITests;
+			sourceTree = "<group>";
+		};
+		DE1275211E0017E8005E05DB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DEC313381E002B4F00B8FA52 /* ListCell */,
+				DE1275291E002312005E05DB /* PhotoCell */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		DE1275221E0017F2005E05DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE1275251E002260005E05DB /* Salada.swift */,
+				DE1275271E0022A8005E05DB /* Todolist.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DE1275291E002312005E05DB /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE12752A1E002332005E05DB /* PhotoCell.swift */,
+				DE12752B1E002332005E05DB /* PhotoCell.xib */,
+			);
+			name = PhotoCell;
+			sourceTree = "<group>";
+		};
+		DEC313381E002B4F00B8FA52 /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEC313391E002B6A00B8FA52 /* ListCell.swift */,
+				DEC3133A1E002B6A00B8FA52 /* ListCell.xib */,
+			);
+			name = ListCell;
 			sourceTree = "<group>";
 		};
 		FA26CFC26DD2D5DB8497E352 /* Frameworks */ = {
@@ -260,9 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE12752D1E002332005E05DB /* PhotoCell.xib in Resources */,
 				DE1274FE1E001432005E05DB /* LaunchScreen.storyboard in Resources */,
 				DE1274FB1E001432005E05DB /* Assets.xcassets in Resources */,
 				DE1274F91E001432005E05DB /* Main.storyboard in Resources */,
+				DEC3133C1E002B6A00B8FA52 /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +380,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -335,7 +390,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1275241E0021C3005E05DB /* FormController.swift in Sources */,
+				DE1275261E002260005E05DB /* Salada.swift in Sources */,
 				DE1274F61E001432005E05DB /* ViewController.swift in Sources */,
+				DEC3133B1E002B6A00B8FA52 /* ListCell.swift in Sources */,
+				DE1275281E0022A8005E05DB /* Todolist.swift in Sources */,
+				DE12752C1E002332005E05DB /* PhotoCell.swift in Sources */,
 				DE1274F41E001432005E05DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +643,7 @@
 				DE12751A1E001434005E05DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE12751B1E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -591,6 +652,7 @@
 				DE12751D1E001434005E05DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE12751E1E001434005E05DB /* Build configuration list for PBXNativeTarget "SaladaSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +661,7 @@
 				DE1275201E001434005E05DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
