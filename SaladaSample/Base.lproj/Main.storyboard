@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rMJ-SW-I4e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,28 +25,48 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyh-cQ-1jd">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Toi-KK-U75"/>
+                                    <constraint firstAttribute="height" constant="44" id="Mpa-WW-DHQ"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="画像付きToDoリスト" id="PrK-DK-QEk"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZz-qD-CX5">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="562"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYo-rX-bHp">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RtQ-LV-STM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="データを追加する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dataFormAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWM-Gh-cr3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oyh-cQ-1jd" secondAttribute="trailing" id="Y0G-i7-0AY"/>
-                            <constraint firstItem="AZz-qD-CX5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h9S-Us-5ef"/>
-                            <constraint firstItem="oyh-cQ-1jd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kZq-z5-ZBn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AZz-qD-CX5" secondAttribute="bottom" id="slj-JI-MaG"/>
-                            <constraint firstItem="oyh-cQ-1jd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tPM-11-ceT"/>
-                            <constraint firstAttribute="trailing" secondItem="AZz-qD-CX5" secondAttribute="trailing" id="v23-K8-cbA"/>
-                            <constraint firstItem="AZz-qD-CX5" firstAttribute="top" secondItem="oyh-cQ-1jd" secondAttribute="bottom" id="vl2-lm-uhs"/>
+                            <constraint firstItem="cYo-rX-bHp" firstAttribute="top" secondItem="AZz-qD-CX5" secondAttribute="bottom" id="51e-PZ-Mak"/>
+                            <constraint firstItem="AZz-qD-CX5" firstAttribute="top" secondItem="oyh-cQ-1jd" secondAttribute="bottom" constant="1" id="8Xa-oy-VW6"/>
+                            <constraint firstAttribute="trailing" secondItem="cYo-rX-bHp" secondAttribute="trailing" id="CJT-9E-JN4"/>
+                            <constraint firstItem="oyh-cQ-1jd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GDx-i6-vfk"/>
+                            <constraint firstItem="oyh-cQ-1jd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Nyz-Vz-sZY"/>
+                            <constraint firstItem="AZz-qD-CX5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RU7-SF-LBY"/>
+                            <constraint firstItem="cYo-rX-bHp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="URI-v3-KLR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cYo-rX-bHp" secondAttribute="bottom" id="fLP-vf-gqq"/>
+                            <constraint firstAttribute="trailing" secondItem="oyh-cQ-1jd" secondAttribute="trailing" id="mR4-Lk-E6p"/>
+                            <constraint firstAttribute="trailing" secondItem="AZz-qD-CX5" secondAttribute="trailing" id="wpE-Lp-X5O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="listTableView" destination="AZz-qD-CX5" id="qKd-Do-amO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +75,7 @@
         <!--Form Controller-->
         <scene sceneID="gCX-h5-bdW">
             <objects>
-                <viewController id="rMJ-SW-I4e" customClass="FormController" customModule="SaladaSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormController" id="rMJ-SW-I4e" customClass="FormController" customModule="SaladaSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mlv-4w-8iL"/>
                         <viewControllerLayoutGuide type="bottom" id="LNH-dJ-0if"/>
@@ -187,20 +207,6 @@
                                     <action selector="syncPhotoAction:" destination="rMJ-SW-I4e" eventType="touchUpInside" id="c7o-bh-8BO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1f-Gh-Mbf">
-                                <rect key="frame" x="15" y="612" width="345" height="40"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="zsn-I0-InB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <state key="normal" title="データを登録する">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addDataAction:" destination="rMJ-SW-I4e" eventType="touchUpInside" id="zy0-UD-UMg"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※ 画像の同期を行うと選択はキャンセルされます。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rj2-cJ-5tf">
                                 <rect key="frame" x="16" y="383" width="343" height="16"/>
                                 <constraints>
@@ -220,6 +226,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1f-Gh-Mbf">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zsn-I0-InB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="データを登録する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDataAction:" destination="rMJ-SW-I4e" eventType="touchUpInside" id="zy0-UD-UMg"/>
+                                </connections>
+                            </button>
                             <view alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9i-Wu-vYf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -245,7 +265,7 @@
                             <constraint firstItem="SSF-vb-XS6" firstAttribute="leading" secondItem="IhM-QE-mpL" secondAttribute="leading" constant="15" id="U4u-X5-J6w"/>
                             <constraint firstItem="LNH-dJ-0if" firstAttribute="top" secondItem="c9i-Wu-vYf" secondAttribute="bottom" id="Wfs-wf-Nj0"/>
                             <constraint firstItem="hHf-9a-tEa" firstAttribute="leading" secondItem="IhM-QE-mpL" secondAttribute="leading" id="XlR-o2-31I"/>
-                            <constraint firstAttribute="trailing" secondItem="F1f-Gh-Mbf" secondAttribute="trailing" constant="15" id="Zbs-0T-ZJn"/>
+                            <constraint firstAttribute="trailing" secondItem="F1f-Gh-Mbf" secondAttribute="trailing" id="Zbs-0T-ZJn"/>
                             <constraint firstItem="c9i-Wu-vYf" firstAttribute="leading" secondItem="IhM-QE-mpL" secondAttribute="leading" id="ZdJ-ji-boH"/>
                             <constraint firstItem="rj2-cJ-5tf" firstAttribute="top" secondItem="e13-g4-rEq" secondAttribute="bottom" constant="8" id="aSt-Hj-yhp"/>
                             <constraint firstItem="pEk-Fv-nCa" firstAttribute="top" secondItem="hHf-9a-tEa" secondAttribute="bottom" constant="15" id="bhB-gk-XCJ"/>
@@ -253,11 +273,11 @@
                             <constraint firstItem="hHf-9a-tEa" firstAttribute="top" secondItem="Mlv-4w-8iL" secondAttribute="bottom" id="eAu-NV-2q6"/>
                             <constraint firstItem="Rgd-6M-6TN" firstAttribute="top" secondItem="0cb-oV-MJe" secondAttribute="bottom" constant="8" id="ee2-GL-Klo"/>
                             <constraint firstItem="GGc-IV-SZt" firstAttribute="trailing" secondItem="IhM-QE-mpL" secondAttribute="trailingMargin" id="eik-ez-nav"/>
-                            <constraint firstItem="F1f-Gh-Mbf" firstAttribute="leading" secondItem="IhM-QE-mpL" secondAttribute="leading" constant="15" id="fFo-xX-hMx"/>
+                            <constraint firstItem="F1f-Gh-Mbf" firstAttribute="leading" secondItem="IhM-QE-mpL" secondAttribute="leading" id="fFo-xX-hMx"/>
                             <constraint firstItem="e13-g4-rEq" firstAttribute="leading" secondItem="IhM-QE-mpL" secondAttribute="leading" constant="15" id="iN5-W2-Fx4"/>
                             <constraint firstItem="arb-Pb-BZq" firstAttribute="top" secondItem="hHf-9a-tEa" secondAttribute="bottom" constant="15" id="kwK-Uv-1c6"/>
                             <constraint firstAttribute="trailing" secondItem="c9i-Wu-vYf" secondAttribute="trailing" id="nIY-5i-vP8"/>
-                            <constraint firstItem="LNH-dJ-0if" firstAttribute="top" secondItem="F1f-Gh-Mbf" secondAttribute="bottom" constant="15" id="oUF-id-d45"/>
+                            <constraint firstItem="LNH-dJ-0if" firstAttribute="top" secondItem="F1f-Gh-Mbf" secondAttribute="bottom" id="oUF-id-d45"/>
                             <constraint firstItem="GGc-IV-SZt" firstAttribute="top" secondItem="SSF-vb-XS6" secondAttribute="bottom" constant="8" id="qdr-4Z-XB5"/>
                             <constraint firstItem="n94-KK-MPD" firstAttribute="top" secondItem="arb-Pb-BZq" secondAttribute="bottom" constant="9" id="qiq-bk-J1o"/>
                             <constraint firstItem="j1M-cW-AsY" firstAttribute="top" secondItem="0cb-oV-MJe" secondAttribute="bottom" constant="8" id="sai-hm-FmK"/>
@@ -268,6 +288,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="F1f-Gh-Mbf" id="G3j-f4-wCA"/>
                         <outlet property="photoCollectionView" destination="SSF-vb-XS6" id="Wta-ev-Tsr"/>
                         <outlet property="photoCountLabel" destination="e13-g4-rEq" id="m5f-d3-Rgr"/>
                         <outlet property="todoDetail" destination="0cb-oV-MJe" id="2eK-YE-cCG"/>
@@ -276,13 +297,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WfI-2E-fgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="HVM-PY-rxa">
-                    <connections>
-                        <action selector="hideKeyboardAction:" destination="rMJ-SW-I4e" id="O2A-Qv-N5q"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="820" y="123.68815592203899"/>
+            <point key="canvasLocation" x="858" y="124"/>
         </scene>
     </scenes>
 </document>

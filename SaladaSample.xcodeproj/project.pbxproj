@@ -22,6 +22,7 @@
 		DE12752D1E002332005E05DB /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE12752B1E002332005E05DB /* PhotoCell.xib */; };
 		DEC3133B1E002B6A00B8FA52 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC313391E002B6A00B8FA52 /* ListCell.swift */; };
 		DEC3133C1E002B6A00B8FA52 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3133A1E002B6A00B8FA52 /* ListCell.xib */; };
+		DEC3133E1E0043CC00B8FA52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC3133D1E0043CC00B8FA52 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		DE12752B1E002332005E05DB /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		DEC313391E002B6A00B8FA52 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		DEC3133A1E002B6A00B8FA52 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		DEC3133D1E0043CC00B8FA52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF31CFF32DFE8E6264C1B2B4 /* Pods-SaladaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaladaSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SaladaSample/Pods-SaladaSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				DE1274F71E001432005E05DB /* Main.storyboard */,
 				DE1274FA1E001432005E05DB /* Assets.xcassets */,
 				DE1274FC1E001432005E05DB /* LaunchScreen.storyboard */,
+				DEC3133D1E0043CC00B8FA52 /* GoogleService-Info.plist */,
 				DE1274FF1E001432005E05DB /* Info.plist */,
 			);
 			path = SaladaSample;
@@ -318,6 +321,7 @@
 				DE1274FB1E001432005E05DB /* Assets.xcassets in Resources */,
 				DE1274F91E001432005E05DB /* Main.storyboard in Resources */,
 				DEC3133C1E002B6A00B8FA52 /* ListCell.xib in Resources */,
+				DEC3133E1E0043CC00B8FA52 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

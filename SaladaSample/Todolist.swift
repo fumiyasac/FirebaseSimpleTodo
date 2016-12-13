@@ -6,10 +6,13 @@
 //  Copyright © 2016年 just1factory. All rights reserved.
 //
 
+import Foundation
+
 class Todolist: Ingredient {
     dynamic var title: String?
     dynamic var detail: String?
     dynamic var progress: String?
+    dynamic var photo_count: String?
     dynamic var image1: File?
     dynamic var image2: File?
 }

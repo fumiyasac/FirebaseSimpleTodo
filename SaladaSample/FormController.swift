@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import SVProgressHUD
 
 class FormController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
 
@@ -25,6 +26,7 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var todoDetail: UITextField!
     @IBOutlet weak var photoCollectionView: UICollectionView!
     @IBOutlet weak var photoCountLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
     //データ登録時の半透明のビュー
     @IBOutlet weak var wrappedView: UIView!
@@ -41,6 +43,7 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         
+        addButton.isEnabled = true
         wrappedView.alpha = 0
         wrappedView.isHidden = true
         
@@ -50,6 +53,14 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         //画像をフォトライブラリから読み込む
         dispatchPhotoLibraryAndReload()
+    }
+
+    /* (UITextFieldDelegate) */
+    
+    //テキストフィールドの編集が終了した際にキーボードを引っ込める
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     /* (UICollectionViewDelegate) */
@@ -134,22 +145,110 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //画像の枚数の表示を変更する
         photoCountLabel.text = "写真選択：\(photoListDictionary.count)枚"
     }
-
-    //キーボードを隠すアクション
-    @IBAction func hideKeyboardAction(_ sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
     
     //データの追加アクション
     @IBAction func addDataAction(_ sender: UIButton) {
-        //
+        
+        //バリデーションを行う
+        if ((todoTitle.text?.isEmpty)! || (todoDetail.text?.isEmpty)! || photoListDictionary.count == 0) {
+
+            let errorAlert = UIAlertController(
+                title: "エラー",
+                message: "入力必須の項目に不備があります。",
+                preferredStyle: UIAlertControllerStyle.alert
+            )
+            errorAlert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.default,
+                    handler: nil
+                )
+            )
+            present(errorAlert, animated: true, completion: nil)
+            
+        //OK:データを1件Firebaseにセーブする
+        } else {
+            
+            //TODO:コメントをきちんと書く
+            
+            addButton.isEnabled = false
+            wrappedView.alpha = 0.35
+            wrappedView.isHidden = false
+            SVProgressHUD.show(withStatus: "読み込み中...")
+            
+            var saveImageData: [Int : File] = [:]
+            var newIndex = 1
+            
+            for (_, value) in photoListDictionary {
+
+                let targetImage = convertAssetOriginPhoto(asset: value)
+                let photoData: Data = UIImageJPEGRepresentation(targetImage, 0.1)!
+                let photoIdentifier = String(format: "%02d", newIndex) + ".jpg"
+                
+                let thumbnail: File = File(name: photoIdentifier, data: photoData)
+                saveImageData[newIndex] = thumbnail
+                
+                newIndex += 1
+            }
+
+            let todolist: Todolist = Todolist()
+            
+            todolist.title = todoTitle.text
+            todolist.detail = todoDetail.text
+            todolist.image1 = saveImageData[1] ?? nil
+            todolist.image2 = saveImageData[2] ?? nil
+            todolist.progress = "これから着手"
+            todolist.photo_count = String(saveImageData.count)
+            
+            todolist.save({ (ref, error) in
+                
+                if ref != nil {
+                    
+                    //プログレスバーを非表示にする
+                    SVProgressHUD.dismiss()
+                    self.wrappedView.alpha = 0
+                    self.wrappedView.isHidden = true
+                    
+                    //Step3: 登録されたアラートを表示してOKを押すと戻る
+                    let correctAlert = UIAlertController(
+                        title: "完了",
+                        message: "入力データが登録されました。",
+                        preferredStyle: UIAlertControllerStyle.alert
+                    )
+                    correctAlert.addAction(
+                        UIAlertAction(
+                            title: "OK",
+                            style: UIAlertActionStyle.default,
+                            handler: { (action: UIAlertAction!) in
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                        )
+                    )
+                    self.present(correctAlert, animated: true, completion: nil)
+                }
+            })
+        }
+
     }
     
     //戻るボタンのアクション
     @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
-        //dismiss(animated: true, completion: nil)
+        self.view.endEditing(true)
+        dismiss(animated: true, completion: nil)
     }
 
+    //PHAsset型のデータを表示用に変換する
+    fileprivate func convertAssetOriginPhoto(asset: PHAsset) -> UIImage {
+        let manager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        var photo = UIImage()
+        option.isSynchronous = true
+        manager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFill, options: option, resultHandler: {(result, info) -> Void in
+            photo = result!
+        })
+        return photo
+    }
+    
     //フォトライブラリを非同期で読み込む処理
     fileprivate func dispatchPhotoLibraryAndReload() {
         
