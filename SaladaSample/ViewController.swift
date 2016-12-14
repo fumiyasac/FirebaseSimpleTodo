@@ -7,9 +7,6 @@
 //
 
 import UIKit
-//import Firebase
-//import FirebaseDatabase
-//import FirebaseStorage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -63,32 +60,66 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if Int(todo.photo_count!) == 1 {
             
+            //初期状態ではアルファを0にする
+            cell?.listImageView1?.alpha = 0
+            
+            //画像のダウンロードを行う
             todo.image1?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
                 if let error: Error = error {
                     print(error)
                     return
                 }
+ 
+                //UIImageをセット
                 cell?.listImageView1?.image = UIImage(data: data!)
-            })
+                
+                //アニメーションをかけてアルファを1にする
+                UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
+                    cell?.listImageView1?.alpha = 1
+                }, completion: nil)
+                
+            })?.resume()
                 
             cell?.setLayoutConstraintSetting(count: 1)
             
         } else if Int(todo.photo_count!) == 2 {
+
+            //初期状態ではアルファを0にする
+            cell?.listImageView1?.alpha = 0
+            cell?.listImageView2?.alpha = 0
 
             todo.image1?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
                 if let error: Error = error {
                     print(error)
                     return
                 }
+
+                //UIImageをセット
                 cell?.listImageView1?.image = UIImage(data: data!)
-            })
+                
+                //アニメーションをかけてアルファを1にする
+                UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
+                    cell?.listImageView1?.alpha = 1
+                }, completion: nil)
+                
+            })?.resume()
+            
             todo.image2?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
                 if let error: Error = error {
                     print(error)
                     return
                 }
+                
+                //UIImageをセット
                 cell?.listImageView2?.image = UIImage(data: data!)
-            })
+                
+                //アニメーションをかけてアルファを1にする
+                UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
+                    cell?.listImageView2?.alpha = 1
+                }, completion: nil)
+                
+            })?.resume()
+
             cell?.setLayoutConstraintSetting(count: 2)
 
         } else {
@@ -109,29 +140,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //アクションシートの呼び出し
         let alertActionSheet = UIAlertController(
-            title: "\(todo.title)のステータスについて",
-            message: "選択したToDoリストの項目を変更 or 削除します。よろしいですか？",
+            title: "\(todo.title!)のステータスについて",
+            message: "選択したToDoリストの項目を削除(完了)します。\nよろしいですか？",
             preferredStyle: UIAlertControllerStyle.actionSheet
         )
         
         //UIActionSheetの戻り値をチェック
-        alertActionSheet.addAction(
-            UIAlertAction(
-                title: "ステータスを変更する",
-                style: UIAlertActionStyle.default,
-                handler: {(action: UIAlertAction!) in
-                    
-                    let currenTodoProgress = todo.progress
-                    if currenTodoProgress == "これから着手" {
-                       todo.progress = "完了しました"
-                    } else {
-                       todo.progress = "これから着手"
-                    }
-                    todo.save()
-                    self.loadTodoData()
-                }
-            )
-        )
         alertActionSheet.addAction(
             UIAlertAction(
                 title: "このToDoを削除する",

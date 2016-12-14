@@ -8,7 +8,7 @@ target 'SaladaSample' do
   pod 'Firebase/Database'
 
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-  pod 'SDWebImage'
+  #pod 'SDWebImage'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
