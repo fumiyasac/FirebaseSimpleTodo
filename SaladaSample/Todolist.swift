@@ -9,6 +9,7 @@
 import Foundation
 
 class Todolist: Ingredient {
+    typealias Tsp = Todolist
     dynamic var title: String?
     dynamic var detail: String?
     dynamic var progress: String?
