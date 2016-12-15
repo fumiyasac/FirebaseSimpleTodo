@@ -10,13 +10,14 @@ import UIKit
 
 class PhotoController: UIViewController, UIScrollViewDelegate {
 
-    //
+    //遷移元から受け取るTodoリストのデータ格納用
     var targetTodoList: Todolist!
     
     //UIパーツの配置
     @IBOutlet weak var todoTitle: UILabel!
     @IBOutlet weak var todoPhotoScrollView: UIScrollView!
     @IBOutlet weak var todoDetailTextView: UITextView!
+    @IBOutlet weak var itemsPerPage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +44,16 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
         //コンテンツ用のScrollViewを初期化
         initScrollViewDefinition()
         
-        //
+        //タイトルと詳細を入れる
         todoTitle.text = targetTodoList.title
         todoDetailTextView.text = targetTodoList.detail
         todoDetailTextView.textColor = UIColor.white
         
-        //スクロールビュー内のサイズを決定する（AutoLayoutで配置を行った場合でもこの部分はコードで設定しないといけない）
+        //写真の枚数を元にスクロールビューの横幅を決定する
         let imageCount: Int = Int(targetTodoList.photo_count!)!
         let imageScrollWidth: CGFloat = CGFloat(Int(todoPhotoScrollView.frame.width) * imageCount)
 
+        //スクロールビュー内のサイズを決定する（AutoLayoutで配置を行った場合でもこの部分はコードで設定しないといけない）
         todoPhotoScrollView.contentSize = CGSize(
             width:  imageScrollWidth,
             height: todoPhotoScrollView.frame.height
@@ -60,10 +62,10 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
         //メインのスクロールビューの中にコンテンツ表示用のコンテナを一列に並べて配置する
         for i in 0...imageCount {
             
-            //メニュー用のスクロールビューにボタンを配置
+            //メニュー用のスクロールビューにUIImageViewを配置
             let imageView: UIImageView = UIImageView()
             todoPhotoScrollView.addSubview(imageView)
-
+            
             imageView.frame = CGRect(
                 x: CGFloat(Int(todoPhotoScrollView.frame.width) * i),
                 y: 0,
@@ -73,6 +75,7 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
             imageView.contentMode = .scaleAspectFill
             imageView.clipsToBounds = true
             
+            //ダウンロード中のインジケータを配置する
             let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
             todoPhotoScrollView.addSubview(activityIndicator)
             
@@ -80,6 +83,7 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
             activityIndicator.center = imageView.center
             activityIndicator.startAnimating()
             
+            //1枚目の写真のセット
             if i == 0 {
                 
                 //画像データのダウンロードタスクを実行する
@@ -93,6 +97,7 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
                     imageView.image = UIImage(data: data!)
                     imageView.alpha = 0
                     activityIndicator.stopAnimating()
+                    activityIndicator.removeFromSuperview()
                     
                     //アニメーションをかけてアルファを1にする
                     UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
@@ -100,7 +105,8 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
                     }, completion: nil)
                     
                 })?.resume()
-                
+
+            //2枚目の写真のセット(※2枚目の写真がある場合)
             } else if i == 1 {
 
                 targetTodoList.image2?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
@@ -112,7 +118,28 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
                     imageView.image = UIImage(data: data!)
                     imageView.alpha = 0
                     activityIndicator.stopAnimating()
+                    activityIndicator.removeFromSuperview()
 
+                    UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
+                        imageView.alpha = 1
+                    }, completion: nil)
+                    
+                })?.resume()
+
+            //3枚目の写真のセット(※3枚目の写真がある場合)
+            } else if i == 2 {
+                
+                targetTodoList.image3?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
+                    if let error: Error = error {
+                        print(error)
+                        return
+                    }
+                    
+                    imageView.image = UIImage(data: data!)
+                    imageView.alpha = 0
+                    activityIndicator.stopAnimating()
+                    activityIndicator.removeFromSuperview()
+                    
                     UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
                         imageView.alpha = 1
                     }, completion: nil)
@@ -128,7 +155,7 @@ class PhotoController: UIViewController, UIScrollViewDelegate {
         //ポップアップ削除を実行する
         removeAnimatePopup()
     }
-
+    
     /* (Fileprivate functions) */
     
     //コンテンツ用のUIScrollViewの初期化を行う

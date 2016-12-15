@@ -13,7 +13,7 @@ import SVProgressHUD
 class FormController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
 
     //画像のバリデーションカウント
-    let validaionCount: Int = 2
+    let validaionCount: Int = 3
     
     //PhotoLibraryで取得した画像を格納する配列
     var photoAssetLists: [PHAsset] = []
@@ -169,13 +169,13 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //OK:データを1件Firebaseにセーブする
         } else {
             
-            //TODO:コメントをきちんと書く
-            
+            //ボタンを押せなくしてインジケーターを表示する
             addButton.isEnabled = false
             wrappedView.alpha = 0.35
             wrappedView.isHidden = false
             SVProgressHUD.show(withStatus: "読み込み中...")
             
+            //PHAssetから取得したデータをリネームしてFile型に変換してDictonaryに詰め直す
             var saveImageData: [Int : File] = [:]
             var newIndex = 1
             
@@ -191,15 +191,17 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 newIndex += 1
             }
 
+            //Todolistクラスのインスタンスを作成してそれぞれのプロパティに対応する値を入れる
             let todolist: Todolist = Todolist()
-            
             todolist.title = todoTitle.text
             todolist.detail = todoDetail.text
             todolist.image1 = saveImageData[1] ?? nil
             todolist.image2 = saveImageData[2] ?? nil
+            todolist.image3 = saveImageData[3] ?? nil
             todolist.progress = "これから着手"
             todolist.photo_count = String(saveImageData.count)
             
+            //saveメソッドを実行して、正常処理の終了時のコールバックを記載する
             todolist.save({ (ref, error) in
                 
                 if ref != nil {
@@ -209,7 +211,7 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     self.wrappedView.alpha = 0
                     self.wrappedView.isHidden = true
                     
-                    //Step3: 登録されたアラートを表示してOKを押すと戻る
+                    //登録されたアラートを表示してOKを押すと戻る
                     let correctAlert = UIAlertController(
                         title: "完了",
                         message: "入力データが登録されました。",
@@ -239,10 +241,12 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     //PHAsset型のデータを表示用に変換する
     fileprivate func convertAssetOriginPhoto(asset: PHAsset) -> UIImage {
+
         let manager = PHImageManager.default()
         let option = PHImageRequestOptions()
         var photo = UIImage()
         option.isSynchronous = true
+        
         manager.requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFill, options: option, resultHandler: {(result, info) -> Void in
             photo = result!
         })
@@ -285,15 +289,14 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
         photoAssetLists.reverse()
     }
     
-    //PHAsset型のデータを表示用に変換する
+    //PHAsset型のデータをサムネイルに変換する（UICollectionViewCell表示用）
     fileprivate func convertAssetThumbnail(asset: PHAsset, rectSize: Int) -> UIImage {
         
-        //TODO:コメントをきちんと書く
         let manager = PHImageManager.default()
         let option = PHImageRequestOptions()
         var thumbnail = UIImage()
-        
         option.isSynchronous = true
+
         manager.requestImage(for: asset, targetSize: CGSize(width: rectSize, height: rectSize), contentMode: .aspectFill, options: option, resultHandler: {(result, info) -> Void in
             thumbnail = result!
         })

@@ -13,8 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //UIパーツの配置
     @IBOutlet weak var listTableView: UITableView!
     
+    //Salada経由で取得したデータを格納する配列
     var todoList: [Todolist] = []
-    
+
     override func viewWillAppear(_ animated: Bool) {
         loadTodoData()
     }
@@ -79,7 +80,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             preferredStyle: UIAlertControllerStyle.actionSheet
         )
 
-        //Todoを削除する
+        //詳細と画像を表示するページへ遷移する
         alertActionSheet.addAction(
             UIAlertAction(
                 title: "詳細と画像を見る",
@@ -138,8 +139,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         sender.endRefreshing()
     }
     
+    //※ observeSingle内ではFirebaseのobserveSingleEventメソッドが実行されて対応するクラスのデータ取得を行なっている
     fileprivate func loadTodoData() {
         
+        //データの取得を行う
         Todolist.observeSingle(.value, block: { todos in
             self.todoList.removeAll()
             todos.forEach({ (todo) in
@@ -150,8 +153,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         })
     }
     
-    
-    //Firebaseにデータを入力するフォームのアクション
+    //Firebaseにデータを入力するフォームへ遷移するアクション
     @IBAction func dataFormAction(_ sender: UIButton) {
         
         //遷移先のインスタンスを作成してコードで遷移を行う

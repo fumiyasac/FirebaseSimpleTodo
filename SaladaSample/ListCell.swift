@@ -8,14 +8,6 @@
 
 import UIKit
 
-struct DeviceSize {
-    
-    //デバイスの画面の横サイズを取得
-    static func screenWidth() -> CGFloat {
-        return UIScreen.main.bounds.size.width
-    }
-}
-
 class ListCell: UITableViewCell {
 
     //UIパーツの配置
