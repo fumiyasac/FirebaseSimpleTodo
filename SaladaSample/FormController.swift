@@ -173,7 +173,7 @@ class FormController: UIViewController, UICollectionViewDelegate, UICollectionVi
             addButton.isEnabled = false
             wrappedView.alpha = 0.35
             wrappedView.isHidden = false
-            SVProgressHUD.show(withStatus: "読み込み中...")
+            SVProgressHUD.show(withStatus: "データ登録処理中...")
             
             //PHAssetから取得したデータをリネームしてFile型に変換してDictonaryに詰め直す
             var saveImageData: [Int : File] = [:]

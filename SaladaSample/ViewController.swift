@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -142,12 +143,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //※ observeSingle内ではFirebaseのobserveSingleEventメソッドが実行されて対応するクラスのデータ取得を行なっている
     fileprivate func loadTodoData() {
         
+        SVProgressHUD.show(withStatus: "データ取得中...")
+        
         //データの取得を行う
         Todolist.observeSingle(.value, block: { todos in
+            
             self.todoList.removeAll()
+
             todos.forEach({ (todo) in
                 self.todoList.append(todo)
             })
+
+            SVProgressHUD.dismiss()
             self.todoList.reverse()
             self.listTableView.reloadData()
         })

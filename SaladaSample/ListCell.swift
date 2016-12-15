@@ -11,7 +11,7 @@ import UIKit
 class ListCell: UITableViewCell {
 
     //UIパーツの配置
-    @IBOutlet weak var listTitle: UITextView!
+    @IBOutlet weak var listTitle: UILabel!
     @IBOutlet weak var listStatus: UILabel!
 
     override func awakeFromNib() {
