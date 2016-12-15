@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -299,6 +299,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WfI-2E-fgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="858" y="124"/>
+        </scene>
+        <!--Photo Controller-->
+        <scene sceneID="dRx-Xw-FzE">
+            <objects>
+                <viewController storyboardIdentifier="PhotoController" id="lAc-HY-CCQ" customClass="PhotoController" customModule="SaladaSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tPN-6L-eWL"/>
+                        <viewControllerLayoutGuide type="bottom" id="wAI-oF-h07"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d1k-Kn-d79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-Xt-gHp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gzh-nb-SSr">
+                                <rect key="frame" x="0.0" y="124" width="375" height="419"/>
+                            </scrollView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="30m-dK-cZm">
+                                <rect key="frame" x="16" y="551" width="343" height="108"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="Dm0-h1-eNA"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlF-LX-D5q">
+                                <rect key="frame" x="16" y="78" width="343" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="wd3-jr-rsc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-77-8jy">
+                                <rect key="frame" x="305" y="20" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="VgH-It-c7x"/>
+                                    <constraint firstAttribute="height" constant="30" id="b23-Q0-OBN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="× CLOSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePopupAction:" destination="lAc-HY-CCQ" eventType="touchUpInside" id="fyV-u6-Oqj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mlF-LX-D5q" firstAttribute="top" secondItem="OyQ-77-8jy" secondAttribute="bottom" constant="28" id="2Rm-Y4-nby"/>
+                            <constraint firstAttribute="trailing" secondItem="OyQ-77-8jy" secondAttribute="trailing" constant="10" id="7Ee-nF-cdp"/>
+                            <constraint firstItem="mlF-LX-D5q" firstAttribute="trailing" secondItem="d1k-Kn-d79" secondAttribute="trailingMargin" id="BJB-SB-RsW"/>
+                            <constraint firstItem="Gzh-nb-SSr" firstAttribute="top" secondItem="mlF-LX-D5q" secondAttribute="bottom" constant="8" id="H6x-Nl-jVs"/>
+                            <constraint firstItem="uYJ-Xt-gHp" firstAttribute="top" secondItem="d1k-Kn-d79" secondAttribute="top" id="RfZ-lb-Zrc"/>
+                            <constraint firstItem="mlF-LX-D5q" firstAttribute="leading" secondItem="d1k-Kn-d79" secondAttribute="leadingMargin" id="Yb7-8n-R6F"/>
+                            <constraint firstItem="uYJ-Xt-gHp" firstAttribute="leading" secondItem="d1k-Kn-d79" secondAttribute="leading" id="ZJU-R0-Izd"/>
+                            <constraint firstItem="wAI-oF-h07" firstAttribute="top" secondItem="30m-dK-cZm" secondAttribute="bottom" constant="8" id="avc-n8-nWE"/>
+                            <constraint firstItem="OyQ-77-8jy" firstAttribute="top" secondItem="tPN-6L-eWL" secondAttribute="bottom" id="eRb-If-Ber"/>
+                            <constraint firstAttribute="trailing" secondItem="30m-dK-cZm" secondAttribute="trailing" constant="16" id="j8E-fH-rsz"/>
+                            <constraint firstAttribute="trailing" secondItem="uYJ-Xt-gHp" secondAttribute="trailing" id="nj9-Jx-ACU"/>
+                            <constraint firstItem="30m-dK-cZm" firstAttribute="leading" secondItem="d1k-Kn-d79" secondAttribute="leading" constant="16" id="rpM-So-0nh"/>
+                            <constraint firstItem="Gzh-nb-SSr" firstAttribute="trailing" secondItem="uYJ-Xt-gHp" secondAttribute="trailing" id="sxw-Jk-olq"/>
+                            <constraint firstItem="30m-dK-cZm" firstAttribute="top" secondItem="Gzh-nb-SSr" secondAttribute="bottom" constant="8" id="u03-cK-6Tt"/>
+                            <constraint firstItem="Gzh-nb-SSr" firstAttribute="leading" secondItem="uYJ-Xt-gHp" secondAttribute="leading" id="w15-Ki-gNt"/>
+                            <constraint firstItem="wAI-oF-h07" firstAttribute="top" secondItem="uYJ-Xt-gHp" secondAttribute="bottom" id="wDr-zd-doe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="todoDetailTextView" destination="30m-dK-cZm" id="Lin-Qc-rsL"/>
+                        <outlet property="todoPhotoScrollView" destination="Gzh-nb-SSr" id="WUa-z9-mna"/>
+                        <outlet property="todoTitle" destination="mlF-LX-D5q" id="qGZ-Ta-jB5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ema-RE-Fdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493.60000000000002" y="832.53373313343332"/>
         </scene>
     </scenes>
 </document>

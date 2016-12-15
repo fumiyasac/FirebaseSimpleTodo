@@ -52,82 +52,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as? ListCell
         
+        //Firebaseに登録されているデータを取得する
         let todo = todoList[indexPath.row] as Todolist
         
+        //データをセルに書く
         cell?.listTitle.text = todo.title
-        cell?.listDetail.text = todo.detail
         cell?.listStatus.text = todo.progress
-        
-        if Int(todo.photo_count!) == 1 {
-            
-            //初期状態ではアルファを0にする
-            cell?.listImageView1?.alpha = 0
-            
-            //画像のダウンロードを行う
-            todo.image1?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
-                if let error: Error = error {
-                    print(error)
-                    return
-                }
- 
-                //UIImageをセット
-                cell?.listImageView1?.image = UIImage(data: data!)
-                
-                //アニメーションをかけてアルファを1にする
-                UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
-                    cell?.listImageView1?.alpha = 1
-                }, completion: nil)
-                
-            })?.resume()
-                
-            cell?.setLayoutConstraintSetting(count: 1)
-            
-        } else if Int(todo.photo_count!) == 2 {
-
-            //初期状態ではアルファを0にする
-            cell?.listImageView1?.alpha = 0
-            cell?.listImageView2?.alpha = 0
-
-            todo.image1?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
-                if let error: Error = error {
-                    print(error)
-                    return
-                }
-
-                //UIImageをセット
-                cell?.listImageView1?.image = UIImage(data: data!)
-                
-                //アニメーションをかけてアルファを1にする
-                UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
-                    cell?.listImageView1?.alpha = 1
-                }, completion: nil)
-                
-            })?.resume()
-            
-            todo.image2?.dataWithMaxSize(1 * 2000 * 2000, completion: { (data, error) in
-                if let error: Error = error {
-                    print(error)
-                    return
-                }
-                
-                //UIImageをセット
-                cell?.listImageView2?.image = UIImage(data: data!)
-                
-                //アニメーションをかけてアルファを1にする
-                UIView.animate(withDuration: 0.28, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations:{
-                    cell?.listImageView2?.alpha = 1
-                }, completion: nil)
-                
-            })?.resume()
-
-            cell?.setLayoutConstraintSetting(count: 2)
-
-        } else {
-            cell?.setLayoutConstraintSetting(count: 0)
-        }
 
         //セルのアクセサリタイプの設定
-        cell?.accessoryType = UITableViewCellAccessoryType.none
+        cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         cell?.selectionStyle = UITableViewCellSelectionStyle.none
         
         return cell!
@@ -136,28 +69,48 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //セルがタップされた際の処理
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //Firebaseに登録されているデータを取得する
         let todo = todoList[indexPath.row] as Todolist
         
         //アクションシートの呼び出し
         let alertActionSheet = UIAlertController(
-            title: "\(todo.title!)のステータスについて",
-            message: "選択したToDoリストの項目を削除(完了)します。\nよろしいですか？",
+            title: "ToDo名：「\(todo.title!)」について",
+            message: "選択した項目の詳細を見る or 削除(完了)します。\nよろしいですか？",
             preferredStyle: UIAlertControllerStyle.actionSheet
         )
-        
-        //UIActionSheetの戻り値をチェック
+
+        //Todoを削除する
         alertActionSheet.addAction(
             UIAlertAction(
-                title: "このToDoを削除する",
-                style: UIAlertActionStyle.destructive,
-                handler: {(action: UIAlertAction!) in
-                    todo.remove()
-                    self.loadTodoData()
+                title: "詳細と画像を見る",
+                style: UIAlertActionStyle.default,
+                handler: { (action: UIAlertAction!) in
+                    
+                    //遷移元から画像表示用のViewControllerのインスタンスを作成する
+                    let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoController") as! PhotoController
+                    
+                    photoVC.modalPresentationStyle = .overCurrentContext
+                    photoVC.view.backgroundColor = UIColor.clear
+                    photoVC.targetTodoList = todo
+                    
+                    self.present(photoVC, animated: false, completion: nil)
                 }
-                
             )
         )
         
+        //Todoを削除する
+        alertActionSheet.addAction(
+            UIAlertAction(
+                title: "このToDo項目を削除(完了)する",
+                style: UIAlertActionStyle.destructive,
+                handler: { (action: UIAlertAction!) in
+                    todo.remove()
+                    self.loadTodoData()
+                }
+            )
+        )
+
+        //キャンセルする
         alertActionSheet.addAction(
             UIAlertAction(
                 title: "キャンセル",

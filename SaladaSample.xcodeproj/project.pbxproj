@@ -20,6 +20,7 @@
 		DE1275281E0022A8005E05DB /* Todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1275271E0022A8005E05DB /* Todolist.swift */; };
 		DE12752C1E002332005E05DB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE12752A1E002332005E05DB /* PhotoCell.swift */; };
 		DE12752D1E002332005E05DB /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE12752B1E002332005E05DB /* PhotoCell.xib */; };
+		DE965C2D1E02A47A0026774E /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE965C2C1E02A47A0026774E /* PhotoController.swift */; };
 		DEC3133B1E002B6A00B8FA52 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC313391E002B6A00B8FA52 /* ListCell.swift */; };
 		DEC3133C1E002B6A00B8FA52 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC3133A1E002B6A00B8FA52 /* ListCell.xib */; };
 		DEC3133E1E0043CC00B8FA52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC3133D1E0043CC00B8FA52 /* GoogleService-Info.plist */; };
@@ -63,6 +64,7 @@
 		DE1275271E0022A8005E05DB /* Todolist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todolist.swift; sourceTree = "<group>"; };
 		DE12752A1E002332005E05DB /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		DE12752B1E002332005E05DB /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		DE965C2C1E02A47A0026774E /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		DEC313391E002B6A00B8FA52 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		DEC3133A1E002B6A00B8FA52 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		DEC3133D1E0043CC00B8FA52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				DE1274F31E001432005E05DB /* AppDelegate.swift */,
 				DE1274F51E001432005E05DB /* ViewController.swift */,
 				DE1275231E0021C2005E05DB /* FormController.swift */,
+				DE965C2C1E02A47A0026774E /* PhotoController.swift */,
 				DE1274F71E001432005E05DB /* Main.storyboard */,
 				DE1274FA1E001432005E05DB /* Assets.xcassets */,
 				DE1274FC1E001432005E05DB /* LaunchScreen.storyboard */,
@@ -400,6 +403,7 @@
 				DEC3133B1E002B6A00B8FA52 /* ListCell.swift in Sources */,
 				DE1275281E0022A8005E05DB /* Todolist.swift in Sources */,
 				DE12752C1E002332005E05DB /* PhotoCell.swift in Sources */,
+				DE965C2D1E02A47A0026774E /* PhotoController.swift in Sources */,
 				DE1274F41E001432005E05DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

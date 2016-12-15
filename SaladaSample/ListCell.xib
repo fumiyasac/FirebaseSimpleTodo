@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="402" id="KGk-i7-Jjw" customClass="ListCell" customModule="SaladaSample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="396"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" rowHeight="162" id="KGk-i7-Jjw" customClass="ListCell" customModule="SaladaSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="396"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QP-cj-Drt">
@@ -27,45 +27,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="具体的にすること：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb0-YO-9pq">
-                        <rect key="frame" x="8" y="99" width="304" height="16"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="16" id="N6e-QL-mFc"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SC3-yf-9sr">
                         <rect key="frame" x="8" y="32" width="304" height="59"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。ToDo名が入ります。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1hs-fu-5NE">
-                        <rect key="frame" x="8" y="123" width="304" height="59"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMp-20-Hff">
-                        <rect key="frame" x="15" y="190" width="145" height="140"/>
-                        <color key="backgroundColor" red="0.80000000000000004" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="140" id="L9o-0f-e6L"/>
-                            <constraint firstAttribute="width" constant="145" id="TrE-fL-daF"/>
-                        </constraints>
-                    </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ULb-80-47R">
-                        <rect key="frame" x="160" y="190" width="145" height="140"/>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="145" id="Gll-tu-xjr"/>
-                            <constraint firstAttribute="height" constant="140" id="zjy-1t-TNM"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDoのステータス：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tZ-0b-j4t">
-                        <rect key="frame" x="8" y="338" width="304" height="16"/>
+                        <rect key="frame" x="8" y="99" width="304" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="mnx-Tr-liu"/>
                         </constraints>
@@ -74,7 +43,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-wr-xgf">
-                        <rect key="frame" x="15" y="362" width="100" height="25"/>
+                        <rect key="frame" x="15" y="123" width="100" height="25"/>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="Om2-np-GAb"/>
@@ -88,44 +57,24 @@
                 <constraints>
                     <constraint firstItem="3QP-cj-Drt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1gQ-am-y5U"/>
                     <constraint firstItem="SC3-yf-9sr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5UB-7J-O7E"/>
-                    <constraint firstAttribute="trailing" secondItem="ULb-80-47R" secondAttribute="trailing" constant="15" id="6mt-nL-NU9"/>
-                    <constraint firstItem="vMp-20-Hff" firstAttribute="top" secondItem="1hs-fu-5NE" secondAttribute="bottom" constant="8" id="7rG-kZ-EyW"/>
-                    <constraint firstItem="6tZ-0b-j4t" firstAttribute="top" secondItem="vMp-20-Hff" secondAttribute="bottom" constant="8" id="9VO-B8-DxM"/>
-                    <constraint firstItem="bb0-YO-9pq" firstAttribute="top" secondItem="SC3-yf-9sr" secondAttribute="bottom" constant="8" id="J9b-jI-EX8"/>
-                    <constraint firstItem="ULb-80-47R" firstAttribute="leading" secondItem="vMp-20-Hff" secondAttribute="trailing" id="LtT-zs-w1D"/>
+                    <constraint firstItem="6tZ-0b-j4t" firstAttribute="top" secondItem="SC3-yf-9sr" secondAttribute="bottom" constant="8" id="7SJ-4o-Aw8"/>
                     <constraint firstItem="SC3-yf-9sr" firstAttribute="top" secondItem="3QP-cj-Drt" secondAttribute="bottom" constant="8" id="NBc-gt-3Se"/>
-                    <constraint firstItem="1hs-fu-5NE" firstAttribute="top" secondItem="bb0-YO-9pq" secondAttribute="bottom" constant="8" id="T7N-J2-wg7"/>
                     <constraint firstItem="3QP-cj-Drt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VTW-bc-Qsk"/>
                     <constraint firstAttribute="trailing" secondItem="3QP-cj-Drt" secondAttribute="trailing" constant="8" id="XL0-K5-d3V"/>
-                    <constraint firstItem="6tZ-0b-j4t" firstAttribute="top" secondItem="ULb-80-47R" secondAttribute="bottom" constant="8" id="YMr-yB-oXN"/>
                     <constraint firstAttribute="trailing" secondItem="SC3-yf-9sr" secondAttribute="trailing" constant="8" id="YhE-fQ-Gvt"/>
                     <constraint firstAttribute="trailing" secondItem="6tZ-0b-j4t" secondAttribute="trailing" constant="8" id="baX-Vc-Nku"/>
-                    <constraint firstItem="ULb-80-47R" firstAttribute="top" secondItem="1hs-fu-5NE" secondAttribute="bottom" constant="8" id="cgl-hW-rJA"/>
                     <constraint firstItem="w9b-wr-xgf" firstAttribute="top" secondItem="6tZ-0b-j4t" secondAttribute="bottom" constant="8" id="dH3-mX-XHI"/>
                     <constraint firstAttribute="bottom" secondItem="w9b-wr-xgf" secondAttribute="bottom" constant="8" id="fW4-q1-jvg"/>
-                    <constraint firstItem="bb0-YO-9pq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gAE-UF-Jfo"/>
-                    <constraint firstItem="vMp-20-Hff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hHR-Jq-vha"/>
-                    <constraint firstAttribute="trailing" secondItem="bb0-YO-9pq" secondAttribute="trailing" constant="8" id="huw-hs-hmB"/>
                     <constraint firstItem="w9b-wr-xgf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="jWs-gM-Hfg"/>
                     <constraint firstItem="6tZ-0b-j4t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kRA-R7-eM9"/>
-                    <constraint firstItem="6tZ-0b-j4t" firstAttribute="top" secondItem="ULb-80-47R" secondAttribute="bottom" constant="8" id="lr0-Eu-BaJ"/>
-                    <constraint firstAttribute="trailing" secondItem="1hs-fu-5NE" secondAttribute="trailing" constant="8" id="r2i-je-9r6"/>
-                    <constraint firstItem="1hs-fu-5NE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="yjV-4U-XQM"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="listDetail" destination="1hs-fu-5NE" id="hi2-Xl-4Be"/>
-                <outlet property="listImageView1" destination="vMp-20-Hff" id="1Iu-40-f2b"/>
-                <outlet property="listImageView1Height" destination="L9o-0f-e6L" id="yNu-Kt-bs6"/>
-                <outlet property="listImageView1Width" destination="TrE-fL-daF" id="4RA-ZI-60a"/>
-                <outlet property="listImageView2" destination="ULb-80-47R" id="Yzq-hY-Rvc"/>
-                <outlet property="listImageView2Height" destination="zjy-1t-TNM" id="gT8-vM-26b"/>
-                <outlet property="listImageView2Width" destination="Gll-tu-xjr" id="ju5-EI-oKJ"/>
                 <outlet property="listStatus" destination="w9b-wr-xgf" id="exj-F0-Cfb"/>
                 <outlet property="listTitle" destination="SC3-yf-9sr" id="Z0v-dT-Fjw"/>
             </connections>
-            <point key="canvasLocation" x="26" y="116"/>
+            <point key="canvasLocation" x="25" y="-1"/>
         </tableViewCell>
     </objects>
 </document>
