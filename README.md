@@ -21,6 +21,16 @@ __キャプチャ画像その2：__
 
 ![sample_capture2.jpg](https://qiita-image-store.s3.amazonaws.com/0/17400/57b0f1e9-9d26-4fdc-2b1d-dbd198c0206a.jpeg)
 
+### 本サンプルでのFirebase内でのデータの持ち方
+
+__Database：__
+
+![firebase_capture1.jpg](https://qiita-image-store.s3.amazonaws.com/0/17400/184350b9-40b6-c00f-3ae5-0416ec132f0c.jpeg)
+
+__Storage：__
+
+![firebase_capture2.jpg](https://qiita-image-store.s3.amazonaws.com/0/17400/ae045458-041a-f061-bc91-29ba4956b2f9.jpeg)
+
 ### 使用ライブラリ
 
 Firebaseまわりに関する処理に関しては、下記のライブラリを使用しました。
